@@ -1,0 +1,145 @@
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+body {
+   margin: 0 0 0 30px;
+}
+
+.card {
+ padding: 20px;
+ background-color: #0d5825;
+ font-size: 25px;
+ color: white;
+ text-align: center;
+}
+
+blockquote p {
+   font-weight: bold;
+   margin: 0;
+}
+
+blockquote p::before {
+    content: '"' ;
+}
+
+blockquote p::after {
+        content: '"' ;
+}
+
+
+
+.card>img {
+    position: relative;
+    width: 150px;
+    transform: rotate(-10deg);
+    padding: 100px 0;
+    top: 1px;
+    transition: top 0.2s linear
+}
+
+img:nth-child(2) {
+    left: 100px;
+    transform: rotate(-25deg);  
+}
+
+img:nth-child(4) {
+  right: 100px;
+  transform: rotate(7deg);
+}
+
+img:hover {
+    top: -30px;
+    cursor: pointer;  
+}
+
+.box-position {
+    position: relative;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: rgb(243, 75, 97);
+    border: rgb(14, 24, 165);
+    left: 20px;
+    top: 20px;
+}
+
+div:nth-child(2) {
+    background: rgb(106, 45, 238);
+    left: 80px;
+    top: 80px;
+    z-index: 2;
+}
+div:nth-child(3) {
+    background: rgb(66, 241, 125);
+    left: 140px;
+    top: 140px;
+}
+
+.menu {
+    position: relative;
+    width: 200px;
+    height: 400px;
+    line-height: 1.5;
+    background: gray;
+    position: fixed;
+    left: 1px;
+    top: 1px;
+    color: white;
+    transform: translateX(-85%);
+    transition: transform 0.5s linear 0.5s; 
+}
+
+.menu:hover {
+    transform: translateX(0);
+    }
+
+.menu-here {
+position: absolute;
+width: max-content;
+height: max-content;
+top: 50%;
+left: 70%;
+transform: translate(50%, 50%);
+transform: rotate(90deg);
+transition: color 0.5s linear 0.5s;
+}
+
+.menu:hover .menu-here {
+    color: gray;
+}
+
+ul {
+    margin-left: 10px;
+    padding: 10px;
+}
+
+li {
+    list-style-type:none;
+}
+
+li:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+    border: 1px solid brown;
+    background: #D98E03;
+    display: inline-block;
+    transform: rotate(45deg);
+}
+
+li>a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+
+li>a:hover {
+    color: #D98E03;
+    cursor: pointer;
+}

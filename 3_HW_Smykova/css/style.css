@@ -1,0 +1,36 @@
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+body {
+    text-align: justify;
+}
+
+.dreams {
+    width: 350px;
+    height: 220px;
+    border: 2px dashed red;
+    padding: 15px 10px 20px;
+    margin: 0 0 30px;
+    background-color: green;
+}
+.holder>img:first-child {
+    float: left;
+    width: 250px;
+    margin: 0 20px 20px 0;
+}
+.holder>p:nth-child(2),
+.holder>p:nth-child(4) {
+    margin: 0;
+}
+.holder>img:nth-child(3) {
+    float: right;
+    width: 150px;
+    margin: 20px 0px 20px 20px;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
